@@ -22,9 +22,15 @@ app.use(express.urlencoded({extended:false}));
 //Credenciales básicos para las peticiones.
 app.use(cors(corsOption));
 
+
+//Petición get de la página "principal".
+app.get("/", (req, res) => {
+    res.status(200).send("Hello World!");
+  });
+
 /**
  * Aquí van las rutas una vez tengamos estas.
  */
 
-//Exportación del módulo.
+/**Exportación del módulo.*/
 module.exports = app;
