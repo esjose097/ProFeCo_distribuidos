@@ -25,7 +25,7 @@ const calificacionSchema = new mongoose.Schema(
             ref:'producto',
             autopopulate: true
         }
-    });
+    },{collection:"calificacion"});
 
 const calificacionModel = mongoose.model('calificacion',calificacionSchema);
 module.exports = calificacionModel;

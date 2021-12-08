@@ -17,7 +17,7 @@ const detalleSchema = new mongoose.Schema(
             ref:'producto',
             autopopulate:true
         }
-    });
+    },{collection:"detalle"});
 
 const detalleModel = mongoose.model('detalle',detalleSchema);
 module.exports = detalleModel;

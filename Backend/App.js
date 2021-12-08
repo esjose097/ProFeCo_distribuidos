@@ -16,6 +16,8 @@ const cors = require('cors');
  * Aquí van los módulos de rutas
  */
 const producto = require('./Routes/producto');
+const oferta = require('./Routes/oferta');
+
 
 const app = express();
 
@@ -47,7 +49,8 @@ app.get("/", (req, res) => {
 /**
  * Aquí van las rutas una vez tengamos estas.
  */
-app.use('/api/v1/productos',producto); //localhost:3032/api/v1/productos/lista
+app.use('/api/v1/productos',producto); //localhost:3032/api/v1/productos
+app.use('/api/v1/ofertas',oferta); //localhost:3032/api/v1/ofertas
 
 /**Exportación del módulo.*/
 module.exports = app;

@@ -13,7 +13,8 @@ const ofertaSchema = new mongoose.Schema(
         fechaFinal:{type: Date, require:true},
         titulo:{type:String, require:true},
         descuento:{type: Number, require:true}
-    });
+    },
+    {collection:"oferta"});
 
 const ofertaModel = mongoose.model('oferta', ofertaSchema);
 module.exports = ofertaModel;

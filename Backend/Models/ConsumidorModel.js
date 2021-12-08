@@ -18,7 +18,7 @@ const consumidorSchema = new mongoose.Schema(
             ref:'oferta',
             autopopulate: true,
         }
-    }    
+    },{collection:"consumidor"}
 );
 
     const consumidorModel = mongoose.model('consumidor', consumidorSchema);

@@ -20,7 +20,7 @@ const mercadoSchema = new mongoose.Schema(
                 ref:'producto',
                 autopupulate:true
             }],
-    });
+    },{collection:"mercado"});
 
 const mercadoModel = mongoose.model('mercado',mercadoSchema);
 module.exports = mercadoModel;

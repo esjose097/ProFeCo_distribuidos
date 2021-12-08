@@ -11,14 +11,14 @@ const productoSchema = new mongoose.Schema(
     {
         nombre:{type: String, require: true},
         precio:{type: Number, require: true},
-        /*
         oferta:
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref:'oferta',
-            autopopulate: true,
-        }        */
-    });
+            ref:"oferta",
+            autopopulate:true
+        },
+    },
+    {collection:"producto"});
 
 const productoModel = mongoose.model('producto', productoSchema);
 module.exports = productoModel;

@@ -11,7 +11,7 @@ const DB = process.env.DATABASE;
  * Se realiza la conexión a la base de datos
  */
 mongoose.connect(DB).then(con=>{
-    console.log('Se conecto correctamente a la BD',DB);
+    console.log('Se conecto correctamente a la BD');
 })
 .catch(err=>{
     console.log(err);

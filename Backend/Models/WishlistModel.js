@@ -16,7 +16,7 @@ const wishlistSchema = mongoose.Schema(
                 ref:'detalle',
                 autopopulate:true
             }],
-    });
+    }, {collection:"wishlist"});
 
 const wishlistModel = mongoose.model('wishlist',wishlistSchema);
 module.exports = wishlistModel;
