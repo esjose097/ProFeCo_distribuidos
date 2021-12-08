@@ -9,8 +9,8 @@ const mongoose = require('mongoose');
 
 const detalleSchema = new mongoose.Schema(
     {
-        cantidad:{type:Number,required},
-        subTotal:{type:Number, required},
+        cantidad:{type:Number,required:true},
+        subTotal:{type:Number, required:true},
         producto:
         {
             type: mongoose.Schema.Types.ObjectId,

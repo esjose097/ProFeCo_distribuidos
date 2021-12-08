@@ -9,9 +9,9 @@ const mongoose = require("mongoose");
 
 const consumidorSchema = new mongoose.Schema(
     {
-        nombre:{type: String, require},
-        usuario:{type: String,require},
-        contra:{type: String, require},
+        nombre:{type: String, require:true},
+        usuario:{type: String,require:true},
+        contra:{type: String, require:true},
         wishlist:
         {
             type: mongoose.Schema.Types.ObjectId,

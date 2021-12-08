@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 const wishlistSchema = mongoose.Schema(
     {
-        total:{type:Number, required},
+        total:{type:Number, required:true},
         productos:[
             {
                 type: mongoose.Schema.Types.ObjectId,

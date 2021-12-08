@@ -10,9 +10,9 @@ const mongoose = require('mongoose');
 const calificacionSchema = new mongoose.Schema(
     {
         comentario: {type:String},
-        valoralizacion: {type:Number,required},
+        valoralizacion: {type:Number,required:true},
         tipo:{type:String,
-        enum:['QUEJA','SUJERENCIA']},
+        enum:['QUEJA','SUJERENCIA'], required:true},
         consumidor:
         {
             type: mongoose.Schema.Types.ObjectId,
