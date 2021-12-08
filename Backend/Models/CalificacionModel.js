@@ -11,8 +11,7 @@ const calificacionSchema = new mongoose.Schema(
     {
         comentario: {type:String},
         valoralizacion: {type:Number,required:true},
-        tipo:{type:String,
-        enum:['QUEJA','SUJERENCIA'], required:true},
+        tipo:{type:String, required:true},
         consumidor:
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -25,7 +24,7 @@ const calificacionSchema = new mongoose.Schema(
             ref:'producto',
             autopopulate: true
         }
-    },{collection:"calificacion"});
+    },{collection:"calificaciones"});
 
-const calificacionModel = mongoose.model('calificacion',calificacionSchema);
+const calificacionModel = mongoose.model('calificaciones',calificacionSchema);
 module.exports = calificacionModel;

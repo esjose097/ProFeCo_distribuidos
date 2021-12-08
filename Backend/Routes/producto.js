@@ -39,7 +39,18 @@ router.post('/agrega', async(req, res) => {
     const {nombre, precio, oferta} = req.body;
     if(nombre && precio && oferta)
     {
-        const producto = new productoModel({nombre:req.body.nombre,precio: req.body.precio,oferta:req.body.oferta});
+        const producto = new productoModel({nombre:nombre,precio:precio,oferta:oferta});
+        producto.save(err =>{
+            if(err != null)
+            {
+                res.status(401).send(err);
+            }
+            res.status(201).json({menssage:"Producto agregado con exito!"});
+        });
+    }
+    else if(nombre && precio)
+    {
+        const producto = new productoModel({nombre:nombre,precio:precio,oferta:null});
         producto.save(err =>{
             if(err != null)
             {

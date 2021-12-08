@@ -19,6 +19,7 @@ const producto = require('./Routes/producto');
 const oferta = require('./Routes/oferta');
 const wishlist = require('./Routes/wishlist');
 const detalle = require('./Routes/detalle');
+const calificacion = require('./Routes/calificacion');
 
 
 const app = express();
@@ -49,12 +50,13 @@ app.get("/", (req, res) => {
   });
 
 /**
- * Aquí van las rutas una vez tengamos estas.
+ * Aquí van las rutas:
  */
 app.use('/api/v1/productos',producto); //localhost:3032/api/v1/productos
 app.use('/api/v1/ofertas',oferta); //localhost:3032/api/v1/ofertas
 app.use('/api/v1/wishlist',wishlist); //localhost:3032/api/v1/wishlist
 app.use('/api/v1/detalles',detalle); //localhost:3032/api/v1/detalles
+app.use('/api/v1/calificacion',calificacion); //localhost:3032/api/v1/calificacion
 
 /**Exportación del módulo.*/
 module.exports = app;
