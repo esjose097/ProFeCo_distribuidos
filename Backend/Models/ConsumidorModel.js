@@ -11,7 +11,13 @@ const consumidorSchema = new mongoose.Schema(
     {
         nombre:{type: String, require},
         usuario:{type: String,require},
-        contra:{type: String, require}
+        contra:{type: String, require},
+        wishlist:
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'oferta',
+            autopopulate: true,
+        }
     }    
 );
 

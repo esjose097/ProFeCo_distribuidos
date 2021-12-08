@@ -1,12 +1,28 @@
+/**
+ * App.js
+ * Archivo js con la finalidad de representar la apliacación, y sus
+ * funcionamientos.
+ * @author La comunidad del anillo 2
+ * Fecha: 07 - 12 - 2021
+ */
+
+/**
+ * Exportaciones necesarias de node.js
+ */
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 /**
  * Aquí van los módulos de rutas
  */
+const producto = require('./Routes/producto');
 
 const app = express();
 
+/**
+ * Certificación básica para el intercambio de jsons y no tener problemas
+ * mas adelante con premisos.
+ */
 const corsOption = {
     origin:"*",
     Credential: true,
@@ -31,6 +47,7 @@ app.get("/", (req, res) => {
 /**
  * Aquí van las rutas una vez tengamos estas.
  */
+app.use('/api/v1/productos',producto); //localhost:3032/api/v1/productos/lista
 
 /**Exportación del módulo.*/
 module.exports = app;

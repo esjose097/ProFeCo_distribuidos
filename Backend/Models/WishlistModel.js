@@ -10,10 +10,10 @@ const mongoose = require('mongoose');
 const wishlistSchema = mongoose.Schema(
     {
         total:{type:Number, required},
-        producto:[
+        productos:[
             {
                 type: mongoose.Schema.Types.ObjectId,
-                ref:'producto',
+                ref:'detalle',
                 autopopulate:true
             }],
     });

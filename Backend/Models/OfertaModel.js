@@ -9,10 +9,10 @@ const mongoose = require('mongoose');
 
 const ofertaSchema = new mongoose.Schema(
     {
-        fechaInicio:{type: Date, require},
-        fechaFin:{type: Date, require},
-        titulo:{type:String, require},
-        descuento:{type: Number, require}
+        fechaInicio:{type: Date, require:true},
+        fechaFinal:{type: Date, require:true},
+        titulo:{type:String, require:true},
+        descuento:{type: Number, require:true}
     });
 
 const ofertaModel = mongoose.model('oferta', ofertaSchema);

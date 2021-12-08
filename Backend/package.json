@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./Index.js"
+    "start": "node ./Index.js",
+    "dev": "nodemon ./Index.js"
   },
   "keywords": [],
   "author": "Comunidad del anillo 2",

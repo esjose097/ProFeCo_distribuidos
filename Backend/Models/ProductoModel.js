@@ -9,16 +9,16 @@ const mongoose = require('mongoose');
 
 const productoSchema = new mongoose.Schema(
     {
-        nombre:{type: String, require},
-        precio:{type: Number, require},
+        nombre:{type: String, require: true},
+        precio:{type: Number, require: true},
+        /*
         oferta:
         {
             type: mongoose.Schema.Types.ObjectId,
             ref:'oferta',
             autopopulate: true,
-        }        
-    }
-);
+        }        */
+    });
 
 const productoModel = mongoose.model('producto', productoSchema);
 module.exports = productoModel;
