@@ -4,7 +4,6 @@
  * @author La comunidad del anillo 2
  * Fecha: 08 - 12 - 2021
  */
-
 const {Router} = require('express');
 const mongoose = require('mongoose');
 const wishlistModel = require('../Models/WishlistModel');
