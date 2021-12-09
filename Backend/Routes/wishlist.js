@@ -19,7 +19,7 @@ mongoose.pluralize(null);
  */
 router.get('/lista', async(req, res) =>{    
     const data = await wishlistModel.find()
-    .populate({path:"productos",model:"detalle"});
+    .populate({path:"productos",populate:{path:"producto"}});
     res.status(401).json(data);
 });
 
@@ -40,8 +40,15 @@ router.get('/lista/:id', async(req, res) =>{
  * de no saber como se hace de primeras.
  */
 router.put('/editar/:id', async(req, res)=>{
-    const id = req.params.id;
+    const idWishList = req.params.id;
+    const idDetalle = req.body.detalle;
     
+    const filter = {_id:idWishList};
+    const update = {$push:{productos:idDetalle}}
+
+    const wishlist = await wishlistModel.findOneAndUpdate(filter,update);
+
+    res.json(wishlist);
 });
 
 module.exports = router;
