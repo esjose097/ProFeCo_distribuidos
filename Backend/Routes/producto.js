@@ -27,6 +27,24 @@ router.get('/lista', async(req, res) =>{
     res.json(data);
 });
 
+/*
+ Método que recibe una petición HTTP GET
+ http://localhost:3032/api/v1/productos/listaNombre/nombre
+router.get('/listaNombre/:nombre', async(req, res)=>{
+    const nombre = req.body.nombre;
+    const data = await productoModel.find()
+    .populate({path:"oferta",model:"oferta"});
+    if(data != null)
+    {
+        const productosFiltrados = data.filter(x => x.nombre == nombre);
+        res.status(201).json(productosFiltrados);
+    }
+    else
+    {
+        res.status(401).json({message:"Ha ocurrido un problema inesperado!"});
+    }
+});
+*/
 /**
  * Método que recibe una petición HTTP GET y realiza una consulta a bd y devuelve
  * un json con los datos de un registro de producto especifico.
