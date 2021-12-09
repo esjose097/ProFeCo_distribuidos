@@ -4,6 +4,7 @@
  * @author La comunidad del anillo 2
  * Fecha: 08 - 12 - 2021
  */
+
 const {Router} = require('express');
 const mongoose = require('mongoose');
 const wishlistModel = require('../Models/WishlistModel');
@@ -14,8 +15,9 @@ const router = Router();
 mongoose.pluralize(null);
 
 /**
- * //localhost:3032/api/v1/wishList
- * Devuelve todas las wishlist
+ * Método que recibe una petición HTTP GET y realiza una consulta a bd
+ * y devuelve un json con una colección de wishlist.
+ * localhost:3032/api/v1/wishList
  */
 router.get('/lista', async(req, res) =>{    
     const data = await wishlistModel.find()
@@ -24,7 +26,9 @@ router.get('/lista', async(req, res) =>{
 });
 
 /**
- * //localhost:3032/api/v1/wishList/id
+ * Método que recibe una petición HTTP GET y realiza una consulta a bd
+ * y devuelve un json con una wishlist especifica.
+ * localhost:3032/api/v1/wishList/id
  */
 router.get('/lista/:id', async(req, res) =>{
     const id = req.params.id;
@@ -35,9 +39,10 @@ router.get('/lista/:id', async(req, res) =>{
 })
 
 /**
- * //localhost:3032/api/v1/wishList/editar/:id
- * Esta en proceso, decidí terminar todas las consultas ademas
- * de no saber como se hace de primeras.
+ * Método que recibe una petición HTTP y realiza una edición a un registro en bd
+ * para de esta manera agregar un detalle en la colección de "productos" de la entidad
+ * "wishlist"
+ * localhost:3032/api/v1/wishList/editar/:id
  */
 router.put('/editar/:id', async(req, res)=>{
     const idWishList = req.params.id;
@@ -51,4 +56,5 @@ router.put('/editar/:id', async(req, res)=>{
     res.json(wishlist);
 });
 
+/** Se exporta el módulo*/
 module.exports = router;

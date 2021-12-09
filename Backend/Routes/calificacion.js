@@ -14,6 +14,8 @@ const router = Router();
 mongoose.pluralize(null);
 
 /**
+ * Método que recibe una petición HTTP GET y se encarga de realizar una consulta a la BD
+ * y devolver un json con una colección de calificaciones.
  * localhost:3032/api/v1/calificacion/lista
  */
 router.get('/lista', async(req,res)=>{
@@ -31,8 +33,9 @@ router.get('/lista', async(req,res)=>{
 });
 
 /**
+ * Método que recibe una petición HTTP GET y realiza una consulta a bd
+ * y regresa un json con una calificación especifica.
  * localhost:3032/api/v1/calificacion/lista/id
- * comentario, valoralizacion, tipo, consumidor, producto
  */
 router.get('/lista/:id', async(req,res)=>{
     const id = req.params.id;
@@ -50,8 +53,9 @@ router.get('/lista/:id', async(req,res)=>{
 });
 
 /**
+ * Método que recibe una petición HTTP POST y realiza un registro a bd de una
+ * calificación.
  * localhost:3032/api/v1/calificacion/alta
- * comentario, valoralizacion, tipo, consumidor, producto
  */
 router.post('/alta',async(req,res)=>{
     const {comentario, valoralizacion, tipo, consumidor, producto} = req.body;

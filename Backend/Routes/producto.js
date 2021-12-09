@@ -1,5 +1,8 @@
 /**
+ * producto.js
  * Módulo routing para productos.
+ * @author La comunidad del anillo 2
+ * Fecha: 08 - 12 - 2021
  */
 
 /**
@@ -14,6 +17,8 @@ const router = Router();
 mongoose.pluralize(null);
 
 /**
+ * Método que recibe una petición HTTP GET para de esta forma realizar una consulta a bd
+ * y devolver un Json con una colección de productos.
  * http://localhost:3032/api/v1/productos/lista
  */
 router.get('/lista', async(req, res) =>{    
@@ -23,6 +28,8 @@ router.get('/lista', async(req, res) =>{
 });
 
 /**
+ * Método que recibe una petición HTTP GET y realiza una consulta a bd y devuelve
+ * un json con los datos de un registro de producto especifico.
  * http://localhost:3032/api/v1/productos/lista/id
  */
 router.get('/lista/:id', async(req, res) =>{    
@@ -33,6 +40,8 @@ router.get('/lista/:id', async(req, res) =>{
 });
 
 /**
+ * Método encargado de recibir una petición HTTP POST y dar de alta un producto
+ * en la base de datos
  * http://localhost:3032/api/v1/productos/agrega
  */
 router.post('/agrega', async(req, res) => {   
@@ -58,7 +67,7 @@ router.post('/agrega', async(req, res) => {
             }
             res.status(201).json({menssage:"Producto agregado con exito!"});
         });
-    }
+    } 
     else
     {
         res.status(401).json({message:"Ha ocurrido un error inesperado"});
@@ -66,6 +75,7 @@ router.post('/agrega', async(req, res) => {
 });
 
 /**
+ * Método que recibe una petición HTTP DELETE Y elimina un registro de la bd
  * http://localhost:3032/api/v1/productos/eliminar
  */
 router.delete('/eliminar:id', async(req, res) =>{
