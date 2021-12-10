@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Profeco Web</title>
+        <div class="pro-fe-co-buy">
+            <label for="form">ProfecoBuy</label>  
+        </div>
+        <link rel="stylesheet" href="css.css" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <h1>ProfecoBuy</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a class="productos" ref="#">
+                    Productos  
+                    </a>
+                </li>
+                <li>
+                    <a class="ofertas" ref="#">
+                            Ofertas
+                    </a>
+                </li>
+                <li>
+                    <div class="search-container">
+                        <input class="search" type="text" placeholder="Buscar.." name="search">
+                        <button class="search" type="submit">Buscar</button>
+                    </div>
+                </li>
+                
+                <li>
+                    <a class="compras" ref="#">
+                        Compras
+                    </a>
+                </li>
+                <li>
+                    <a class="logout" ref="#">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="container padding-bottom-3x mb-2">
+                
+                    <div class="col-lg-8">
+                        <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                        <!-- Wishlist Table-->
+                        <div class="table-responsive wishlist-table margin-bottom-none">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Productos</th>
+                                        <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#">Clear Wishlist</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                <div class="product-info">
+                                                    <h4 class="product-title"><a href="#">Unionbay Park</a></h4>
+                                                    <div class="text-lg text-medium text-muted">$43.90</div>
+                                                    <div>N&uacute;mero de articulos:
+                                                        <div class="d-inline text-success">6</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="custom-control-input" type="checkbox" id="remove-from-cart" title="" data-original-title="Remove item">
+                                            <label class="custom-control-input" for="remove">Remover</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                
+                                                <div class="product-info">
+                                                    <h4 class="product-title"><a href="#">Daily Fabric Cap</a></h4>
+                                                    <div class="text-lg text-medium text-muted">$24.70</div>
+                                                    <div>N&uacute;mero de articulos:
+                                                        <div class="d-inline text-success">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="custom-control-input" type="checkbox" id="remove-from-cart" title="" data-original-title="Remove item">
+                                            <label class="custom-control-input" for="remove">Remover</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                <div class="product-info">
+                                                    <h4 class="product-title"><a href="#">Cole Haan Crossbody</a></h4>
+                                                    <div class="text-lg text-medium text-muted">$200.00</div>
+                                                    <div>N&uacute;mero de articulos:
+                                                        <div class="d-inline text-success">2</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="custom-control-input" type="checkbox" id="remove-from-cart" title="" data-original-title="Remove item">
+                                            <label class="custom-control-input" for="remove">Remover</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

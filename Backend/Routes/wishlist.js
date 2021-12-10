@@ -21,7 +21,7 @@ mongoose.pluralize(null);
 router.get('/lista', async(req, res) =>{    
     const data = await wishlistModel.find()
     .populate({path:"productos",populate:{path:"producto"}});
-    res.status(401).json(data);
+    res.status(201).json(data);
 });
 
 /**

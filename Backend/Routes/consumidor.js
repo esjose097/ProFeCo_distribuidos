@@ -51,7 +51,7 @@ router.post('/login', async(req,res)=>{
         {
             if(auxUsuario.contra == contra)
             {
-                res.status(201).json({validado:true,message:"Inicio de sesión exitoso!"});
+                res.status(201).json({validado:true,message:"Inicio de sesión exitoso!",idConsumidor:auxUsuario._id});
             }
             else
             {
@@ -59,6 +59,22 @@ router.post('/login', async(req,res)=>{
             }
         }
     }
+});
+
+/**
+ * Método que recibe una petición HTTP GET y realiza una consulta a la base de datos
+ * y devuelve la wishlist de un consumidor especifico.
+ * 
+ * localhost:3032/api/v1/consumidor/getWishlist/id
+ */
+router.get('/getWishlist/:id', async(req,res)=>{
+    const id = req.params.id;
+    const consumidor = await consumidorModel.findOne({_id:id})
+    .populate({path:"wishlist",
+    populate:{path:"productos",
+    populate:{path:"producto"}}});
+    const wishlist = consumidor.wishlist;
+    res.status(201).json(wishlist);
 });
 
 module.exports = router;

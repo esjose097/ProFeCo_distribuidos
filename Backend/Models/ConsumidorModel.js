@@ -15,7 +15,7 @@ const consumidorSchema = new mongoose.Schema(
         wishlist:
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref:'oferta',
+            ref:'wishList',
             autopopulate: true,
         }
     },{collection:"consumidor"}
