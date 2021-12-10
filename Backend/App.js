@@ -20,6 +20,7 @@ const oferta = require('./Routes/oferta');
 const wishlist = require('./Routes/wishlist');
 const detalle = require('./Routes/detalle');
 const calificacion = require('./Routes/calificacion');
+const consumidor = require('./Routes/consumidor');
 
 
 const app = express();
@@ -57,6 +58,7 @@ app.use('/api/v1/ofertas',oferta); //localhost:3032/api/v1/ofertas
 app.use('/api/v1/wishlist',wishlist); //localhost:3032/api/v1/wishlist
 app.use('/api/v1/detalles',detalle); //localhost:3032/api/v1/detalles
 app.use('/api/v1/calificacion',calificacion); //localhost:3032/api/v1/calificacion
+app.use('/api/v1/consumidor',consumidor); //localhost:3032/api/v1/consumidor
 
 /**Exportación del módulo.*/
 module.exports = app;
