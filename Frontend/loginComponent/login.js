@@ -57,7 +57,7 @@ class loginCosumidor extends HTMLElement {
     }
 
     #getDatosForm(shadow){  
-        const Correo = shadow.getElementById("correo").value;
+        const Correo = shadow.getElementById("user").value;
         const Contra = shadow.getElementById("contra").value;
      
         const data = {
